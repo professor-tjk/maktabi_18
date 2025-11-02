@@ -1,316 +1,241 @@
 <!DOCTYPE html>
 <html lang="tg">
-  <meta charset="UTF-8">
 <head>
-  <title>Хуш омадед ба Китобхонаи Электронӣ</title>
+  <meta charset="UTF-8">
+  <title>Китобхонаи Электронӣ</title>
   <style>
- :root {
-      --main-bg: #f9f9f9;
-      --main-text: #111;
-      --btn-bg: linear-gradient(45deg, #4CAF50, #2196F3);
-      --accent: #4CAF50;
-    }
-    body {
-      background: linear-gradient(to right, #b2dfdb, #ffffff);
-      font-family: 'Times New Roman', Times, serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-      min-height: 100vh;
-      animation: fadeIn 1s ease;
-      transition: 0.5s ease;
-      position: relative;
-    }
-    header{
-      width: 1300px;
-      background: darkgreen;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 30px;
-    }
-     header h1 {
-      margin: 0;
-      flex: 1;
-      text-align: center;
-      font-size: 44px;
-    }
-    .button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 52px rgb(255, 0, 0);
-    }
-    .button {
-      margin:0px;
-      background: linear-gradient(45deg, darkgreen, #008cff);
-      color: white;
-      padding: 0px;
-      border: none;
-      border-radius: 10px;
-      font-size: 29px;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgb(0, 0, 0);
-      transition: transform 0.2s, box-shadow 0.2s;
-      font-family: 'Times New Roman', Times, serif;
-      text-decoration: none;
-      display:flex;
-      align-items:center;
-      justify-content: center;
-      width: 150px;
-    
-    }
-  img {
-      margin: 0px;
-      align-items: center;
-      text-align: center;
-      width: 1180px;
-      height: 470px;
-      object-fit: contain;
-      padding: 0px;
-      box-shadow: 0 2px 20px black;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-}
-  
-        .links-container {
-      text-align: center;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      gap: 70px;
-      margin-top: 0;
-      flex-wrap: wrap;
-      max-width: 90vw;
-      align-items: flex-start;
+    :root {
+      --main-bg: #f9fafc;
+      --primary: #2b7de9;
+      --secondary: #26c485;
+      --text: #222;
+      --card-bg: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.1);
     }
-.link-item {
-      left:0px;
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #e8f5e9);
+      color: var(--text);
+      display: flex;
       flex-direction: column;
       align-items: center;
-      width: 140px;
+      min-height: 100vh;
+      animation: fadeIn 1s ease-in;
+      transition: background 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    header {
+      width: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
       color: white;
-      font-family: 'Times New Roman', Times, serif;
-      text-decoration: none;
-      transition: transform 0.3s ease;
-      position: relative;
+      padding: 30px 0;
       text-align: center;
-      align-items: center;
+      font-size: 36px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px var(--shadow);
+      position: relative;
+    }
+
+    .menu-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .menu-button:hover {
+      background-color: rgba(255,255,255,0.3);
+      transform: scale(1.05);
+    }
+
+    #sidebarMenu {
+      position: fixed;
+      top: 80px;
+      left: 20px;
+      width: 260px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px var(--shadow);
+      padding: 20px;
+      transform: translateX(-120%);
+      transition: transform 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 100;
+    }
+
+    #sidebarMenu.show {
+      transform: translateX(0);
+    }
+
+    #sidebarMenu a {
+      text-decoration: none;
+      font-size: 20px;
+      color: var(--primary);
+      background: #f0f7ff;
+      padding: 10px;
+      border-radius: 8px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    #sidebarMenu a:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    img {
+      width: 80%;
+      max-width: 1000px;
+      margin-top: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 25px var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.02);
+    }
+
+    h1, h2 {
+      margin-top: 40px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    c {
+      display: block;
+      max-width: 900px;
+      margin: 20px auto;
+      font-size: 20px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    l {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .links-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    .link-item {
+      text-decoration: none;
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 15px;
+      width: 170px;
+      box-shadow: 0 6px 20px var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .link-item:hover {
-      transform: scale(1.1);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
-    
+
     .link-item img {
-      width: 150px;
-      height: 180px;
-      object-fit: contain;
-      border-radius: 20px;
-      box-shadow: 0 2px 20px black;
-      margin-bottom: 8px;
-      background-color: white;
-      padding: 5px;
-      text-align: center;
-      align-items: center;
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
 
     .link-item span {
+      color: var(--text);
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      color: white;
+      width: 100%;
       text-align: center;
-      align-items: center;
-      font-size: 30px;
-      font-weight: bold;
-      color: rgb(0, 0, 0);
-      text-shadow: 1px 1px 1px rgb(0, 0, 0);
-      
+      border-top: 2px solid rgba(255,255,255,0.3);
+      font-size: 16px;
     }
-    .lin-item :hover{
-      transform: scale(1.1);
-    }
-    
-
-
-    c{
-      font-size: 28px;
-      font-family: 'Times New Roman', Times, serif;
-          font-weight: bold;
-      color: rgb(0, 0, 0);
-    }
-    l{
-      
-      color:#008cff
-    }
-    h2{
-      width: 1340px;
-      background-color: #008cff;
-      font-size: 30px;
-      font-family: 'Times New Roman', Times, serif;
-    }
-  .menu-button {
-  width: 130px;
-  position: absolute;
-  background-color:limegreen;
-  top: 20px;
-  left: 20px;
-  font-size: 36px;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  border-radius: 6px;
-}
-
-.menu-button:hover {
-  transform: scale(1.05);
-}
-#sidebarMenu {
-  padding-bottom: 10px;
-  position: fixed;
-  top: 75px;
-  left:15px;
-  width: 300px; 
-  max-height: 200vh; 
-  background-color: rgba(49, 45, 45, 0.9);
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
-  border-radius: 10px 10px ;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  flex-direction:column-reverse;
-  transform: translateY(100%);
-  opacity: 0;
-}
-
-#sidebarMenu.show {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-
-#sidebarMenu a {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  width: auto;
-  background: linear-gradient(45deg, darkgreen, #008cff);
-  color: white;
-  text-decoration: none;
-  font-size: 40px;
-  transition:fs 0.3s;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-#sidebarMenu a:hover {
-  border-color: red;
-  transform: scale(1.05);
-  
-}
   </style>
 </head>
 <body>
-   <header>
-    <br><br>
-        <div class="menu-button" onclick="toggleMenu()">Меню</div>
-       
-<div id="sidebarMenu">
-<a class="button"  href='1/kitobkhona/exe.html'>Хабарҳо</a>
-<a class="button"  href='1/kitobkhona/exe.html'>Ҷашнвораҳо</a>
-<a class="button"  href='1/zs.html'>Зеҳни Сунъӣ</a>
-<a class="button"  href='1/kitobkhona/exe.html'>Китобхона</a>
-</div>
-    </header>
- <br><br> <br><br>
-  <img src="maktab.jpg"  />
-    <h1>Маълумоти мухтасар оид ба муассиса</h1>
-    <c>Муассисаи таҳсилоти миёнаи умумии №18 ба номаи Даврон Ҷалилов дар вилояти Хатлон,
-    ноҳияи Темурмалик,Деҳаи Шибанай ҷойгир аст.Муассисаи мазкур дар санаи <l>06.09.2022</l> аз тарафи Сарвазири Ҷумҳурии Тоҷикистон
-    муҳтарам Қоҳир Расулзода ба корбарӣ машғул аст.муассисаи мазкур дорои ду ошёна буда, ҳамчунин толори варзишии 
-    дорад.Муассиса дорои <l>17</l> синфхона аз ҷумла утоқи директор, хонаи муаллимон,синфхонаи компютер,химия,физика,касбу ҳунар,ва утоқҳои муовини 
-    директор оид ба таълиму тарбия мебошад.Муасиса дар худ <l>298</l> хонанда аз ҷумла <l>120</l> духтар ва <l>178</l> 
-    писар таҳсил мекунад.Дар муассиса <l>30</l> омӯзгор аз ҷумла <l>21</l> Зан ва <l>9</l> мард кор ва фаъолият 
-    мекунад.Дар зер руйхати омузгорони муассиса оварда шудааст.
-    </c>
-    <br><h2>Директори муассиса</h2><br>
- 
-    <div class="links-container" id="linksContainer">
-    <a href="1/omuzgor/kholisamo.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/kholisamo.jpg"  />
+  <header>
+    Китобхонаи Электронӣ 📚
+    <div class="menu-button" onclick="toggleMenu()">☰ Меню</div>
+    <div id="sidebarMenu">
+      <a href="#">Хабарҳо</a>
+      <a href="#">Ҷашнвораҳо</a>
+      <a href="#">Зеҳни сунъӣ</a>
+      <a href="#">Китобхона</a>
+    </div>
+  </header>
+
+  <img src="01/1.png" alt="Мактab">
+
+  <h1>Маълумоти мухтасар оид ба муассиса</h1>
+  <c>
+    Муассисаи таҳсилоти миёнаи умумии №18 ба номи Даврон Ҷалилов дар вилояти Хатлон, ноҳияи Темурмалик ҷойгир аст. 
+    Муассисаи мазкур дар санаи <l>06.09.2022</l> аз тарафи Сарвазири Ҷумҳурии Тоҷикистон ба истифода дода шудааст. 
+    Дар муассиса <l>298</l> хонанда ва <l>30</l> омӯзгор фаъолият доранд.
+  </c>
+
+  <h2>Директори муассиса</h2>
+  <div class="links-container">
+    <a href="#" class="link-item">
+      <img src="1/omuzgor/rasm/kholisamo.jpg" alt="Директор">
       <span>Нозимова Холисамо</span>
     </a>
   </div>
-     <br><h2>Муовинони директор</h2><br>
- 
-     <div class="links-container" id="linksContainer">
- <a href="1/omuzgor/lutfullo.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/lutfullo.png"  />
+
+  <h2>Муовинони директор</h2>
+  <div class="links-container">
+    <a href="#" class="link-item">
+      <img src="1/omuzgor/rasm/lutfullo.png" alt="Муовин">
       <span>Турдиев Лутфулло</span>
     </a>
- 
- 
-    <a href="omuzgor/jamoliddin.html"  class="link-item" >
-      <img src="omuzgor/rasm/jamoliddin.png"  />
+    <a href="#" class="link-item">
+      <img src="omuzgor/rasm/jamoliddin.png" alt="Муовин">
       <span>Лолаев Отахон</span>
     </a>
   </div>
- 
- 
-  <br><h2>Омӯзгорони муассиса</h2><br>
 
-     <div class="links-container" id="links-container">
-         
-    
-    <a href="1/omuzgor/lutfullo.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/lutfullo.png"  />
-      <span>Турдиев Лутфулло</span>
-    </a>
+  <footer>
+    © 2025 Китобхонаи Электронӣ — Ҳамаи ҳуқуқҳо ҳифз шудаанд.
+  </footer>
 
-      <a href="1/omuzgor/azizullo.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/azizullo.png"  />
-      <span>Турдиев Азизулло</span>
-    </a>
- <a href="1/omuzgor/jamoliddin.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/jamoliddin.png"  />
-      <span>Ғафуров Ҷамолиддин</span>
-    </a>
-
-     <a href="1/omuzgor/sokinamoh.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/sokinamoh.jpg"  />
-      <span>Сокинамоҳи Муҳиддин</span>
-    </a>
-     <a href="1/omuzgor/ramazom.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/ramazon.png"  />
-      <span>Рамазони Қурбоналӣ</span>
-      </a>
-       <a href="1/omuzgor/nilufar.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/nilufar.jpg"  />
-      <span>Эсанова Нилуфар</span>
-    </a>
-      <a href="1/omuzgor/ganjina.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/ganjina.jpg"  />
-      <span>Ганҷинаи Ғоибназар</span>
-      </a>
-      <a href="1/omuzgor/safina.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/safina.jpg"  />
-      <span>Тешаева Сафина</span>
-      </a>
-      <a href="1/omuzgor/madina.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/madina.jpg"  />
-      <span>Зарипова Мадина</span>
-      </a>
-      
-    </div>
-<script>
-  function toggleMenu() {
-  const sidebar = document.getElementById('sidebarMenu');
-  if (sidebar.classList.contains('show')) {
-    sidebar.classList.remove('show');
-    setTimeout(() => {
-      sidebar.style.display = 'none';
-    }, 300);
-  } else {
-    sidebar.style.display = 'flex';
-    setTimeout(() => {
-      sidebar.classList.add('show');
-    }, 10);
-  }
-}
-</script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebarMenu').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
