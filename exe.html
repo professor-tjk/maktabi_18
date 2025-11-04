@@ -1,16 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="tg">
-  <meta charset="UTF-8">
 <head>
-  <title>МТМУ№18</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МТМУ №18</title>
   <style>
- :root {
+    :root {
       --main-bg: #f9f9f9;
       --main-text: #111;
       --btn-bg: linear-gradient(45deg, #4CAF50, #2196F3);
       --accent: #4CAF50;
     }
+
     body {
       background: linear-gradient(to right, #b2dfdb, #ffffff);
       font-family: 'Times New Roman', Times, serif;
@@ -23,256 +24,233 @@
       animation: fadeIn 1s ease;
       transition: 0.5s ease;
       position: relative;
+      margin: 0;
+      padding: 0;
     }
-    header{
-      width: 1300px;
+
+    header {
+      width: 100%;
+      max-width: 1300px;
       background: darkgreen;
       color: white;
       text-align: center;
       padding: 20px;
-      font-size: 30px;
+      font-size: 2vw;
+      box-sizing: border-box;
     }
-     header h1 {
-      margin: 0;
-      flex: 1;
-      text-align: center;
-      font-size: 44px;
-    }
-    .button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 52px rgb(255, 0, 0);
-    }
-    .button {
-      margin:0px;
-      background: linear-gradient(45deg, darkgreen, #008cff);
-      color: white;
-      padding: 0px;
-      border: none;
-      border-radius: 10px;
-      font-size: 29px;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgb(0, 0, 0);
-      transition: transform 0.2s, box-shadow 0.2s;
-      font-family: 'Times New Roman', Times, serif;
-      text-decoration: none;
-      display:flex;
-      align-items:center;
-      justify-content: center;
-      width: 150px;
-    
-    }
-  img {
-      margin: 0px;
-      align-items: center;
-      text-align: center;
-      width: 1180px;
-      height: 470px;
-      object-fit: contain;
-      padding: 0px;
-      box-shadow: 0 2px 20px black;
 
-}
-  
-        .links-container {
-      text-align: center;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      gap: 70px;
-      margin-top: 0;
-      flex-wrap: wrap;
-      max-width: 90vw;
-      align-items: flex-start;
+    header h1 {
+      margin: 0;
+      font-size: clamp(24px, 4vw, 44px);
     }
-.link-item {
-      left:0px;
+
+    img {
+      width: 95%;
+      max-width: 1180px;
+      height: auto;
+      object-fit: contain;
+      box-shadow: 0 2px 20px black;
+      border-radius: 8px;
+    }
+
+    h1 {
+      font-size: clamp(20px, 3vw, 36px);
+      color: #000;
+    }
+
+    h2 {
+      width: 100%;
+      background-color: #008cff;
+      color: white;
+      font-size: clamp(18px, 2.5vw, 30px);
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    c {
+      display: block;
+      font-size: clamp(16px, 2vw, 28px);
+      font-weight: bold;
+      color: #000;
+      padding: 10px 20px;
+      max-width: 1200px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    l {
+      color: #008cff;
+    }
+
+    .links-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+      max-width: 100%;
+      padding: 10px;
+    }
+
+    .link-item {
+      display: flex;
       flex-direction: column;
       align-items: center;
-      width: 140px;
-      color: white;
-      font-family: 'Times New Roman', Times, serif;
       text-decoration: none;
+      width: 150px;
+      color: white;
       transition: transform 0.3s ease;
-      position: relative;
-      text-align: center;
-      align-items: center;
     }
 
-    .link-item:hover {
-      transform: scale(1.1);
-    }
-    
     .link-item img {
-      width: 150px;
-      height: 180px;
+      width: 100%;
+      height: auto;
       object-fit: contain;
-      border-radius: 20px;
+      border-radius: 15px;
       box-shadow: 0 2px 20px black;
-      margin-bottom: 8px;
       background-color: white;
       padding: 5px;
-      text-align: center;
-      align-items: center;
     }
 
     .link-item span {
       text-align: center;
-      align-items: center;
-      font-size: 30px;
+      font-size: clamp(14px, 2vw, 20px);
       font-weight: bold;
-      color: rgb(0, 0, 0);
-      text-shadow: 1px 1px 1px rgb(0, 0, 0);
-      
+      color: black;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+      margin-top: 5px;
     }
-    .lin-item :hover{
-      transform: scale(1.1);
+
+    .link-item:hover {
+      transform: scale(1.05);
     }
-    
 
-
-    c{
-      font-size: 28px;
-      font-family: 'Times New Roman', Times, serif;
-          font-weight: bold;
-      color: rgb(0, 0, 0);
+    .menu-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: limegreen;
+      color: white;
+      border-radius: 6px;
+      padding: 10px 20px;
+      font-size: clamp(16px, 2.5vw, 28px);
+      cursor: pointer;
+      transition: transform 0.3s ease;
     }
-    l{
-      
-      color:#008cff
+
+    .menu-button:hover {
+      transform: scale(1.05);
     }
-    h2{
-      width: 1340px;
-      background-color: #008cff;
-      font-size: 30px;
-      font-family: 'Times New Roman', Times, serif;
+
+    #sidebarMenu {
+      position: fixed;
+      top: 70px;
+      left: 15px;
+      width: 80%;
+      max-width: 300px;
+      background-color: rgba(49, 45, 45, 0.95);
+      padding: 20px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      transform: translateY(100%);
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000;
     }
-  .menu-button {
-  width: 130px;
-  position: absolute;
-  background-color:limegreen;
-  top: 20px;
-  left: 20px;
-  font-size: 36px;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  border-radius: 6px;
-}
 
-.menu-button:hover {
-  transform: scale(1.05);
-}
-#sidebarMenu {
-  padding-bottom: 10px;
-  position: fixed;
-  top: 75px;
-  left:15px;
-  width: 300px; 
-  max-height: 200vh; 
-  background-color: rgba(49, 45, 45, 0.9);
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
-  border-radius: 10px 10px ;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  flex-direction:column-reverse;
-  transform: translateY(100%);
-  opacity: 0;
-}
+    #sidebarMenu.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
 
-#sidebarMenu.show {
-  transform: translateY(0);
-  opacity: 1;
-}
+    #sidebarMenu a {
+      background: linear-gradient(45deg, darkgreen, #008cff);
+      color: white;
+      text-decoration: none;
+      font-size: clamp(16px, 2vw, 24px);
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
 
+    #sidebarMenu a:hover {
+      transform: scale(1.05);
+    }
 
-#sidebarMenu a {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  width: auto;
-  background: linear-gradient(45deg, darkgreen, #008cff);
-  color: white;
-  text-decoration: none;
-  font-size: 40px;
-  transition:fs 0.3s;
-  font-family: 'Times New Roman', Times, serif;
-}
+    /* 📱 Адаптив барои телефонҳо */
+    @media (max-width: 600px) {
+      header {
+        font-size: 18px;
+        padding: 10px;
+      }
 
-#sidebarMenu a:hover {
-  border-color: red;
-  transform: scale(1.05);
-  
-}
+      .link-item {
+        width: 120px;
+      }
+
+      .menu-button {
+        font-size: 20px;
+        padding: 6px 12px;
+      }
+    }
   </style>
 </head>
 <body>
-   <header>
-    <br><br>
-        <div class="menu-button" onclick="toggleMenu()">Меню</div>
-       
-       
-<div id="sidebarMenu">
-<a class="button"  href='#'>Хабарҳо</a>
-<a class="button"  href='#'>Ҷашнвораҳо</a>
-<a class="button"  href='#'></a>
-<a class="button"  href='#'>Китобхона</a>
-</div>
-    </header>
- <br><br> <br><br>
-  <img src="1/maktab.jpg"  />
-    <h1>Маълумоти мухтасар оид ба муассиса</h1>
-    <c>Муассисаи таҳсилоти миёнаи умумии №18 ба номаи Даврон Ҷалилов дар вилояти Хатлон,
-    ноҳияи Темурмалик,Деҳаи Шибанай ҷойгир аст.Муассисаи мазкур дар санаи <l>06.09.2022</l> аз тарафи Сарвазири Ҷумҳурии Тоҷикистон
-    муҳтарам Қоҳир Расулзода ба корбарӣ машғул аст.муассисаи мазкур дорои ду ошёна буда, ҳамчунин толори варзишии 
-    дорад.Муассиса дорои <l>17</l> синфхона аз ҷумла утоқи директор, хонаи муаллимон,синфхонаи компютер,химия,физика,касбу ҳунар,ва утоқҳои муовини 
-    директор оид ба таълиму тарбия мебошад.Муасиса дар худ <l>298</l> хонанда аз ҷумла <l>120</l> духтар ва <l>178</l> 
-    писар таҳсил мекунад.Дар муассиса <l>30</l> омӯзгор аз ҷумла <l>21</l> Зан ва <l>9</l> мард кор ва фаъолият 
-    мекунад.Дар зер руйхати омузгорони муассиса оварда шудааст.
-    </c>
-    <br><h2>Директори муассиса</h2><br>
- 
-    <div class="links-container" id="linksContainer">
-    <a href="1/omuzgor/kholisamo.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/kholisamo.jpg"  />
+  <header>
+    <div class="menu-button" onclick="toggleMenu()">Меню</div>
+    <h1>МТМУ №18</h1>
+    <div id="sidebarMenu">
+      <a href="#">Хабарҳо</a>
+      <a href="#">Ҷашнвораҳо</a>
+      <a href="#">Китобхона</a>
+    </div>
+  </header>
+
+  <img src="1/maktab.jpg" alt="МТМУ №18" />
+
+  <h1>Маълумоти мухтасар оид ба муассиса</h1>
+
+  <c>
+    Муассисаи таҳсилоти миёнаи умумии №18 ба номи Даврон Ҷалилов дар вилояти Хатлон, ноҳияи Темурмалик, деҳаи Шибанай ҷойгир аст.
+    Муассиса дар санаи <l>06.09.2022</l> аз тарафи Сарвазири Ҷумҳурии Тоҷикистон муҳтарам Қоҳир Расулзода ифтитоҳ ёфтааст.
+    Ин муассиса дорои ду ошёна, толори варзишӣ ва <l>17</l> синфхона мебошад. Дар муассиса <l>298</l> хонанда ва <l>30</l> омӯзгор фаъолият доранд.
+  </c>
+
+  <h2>Директори муассиса</h2>
+  <div class="links-container">
+    <a href="1/omuzgor/kholisamo.html" class="link-item">
+      <img src="1/omuzgor/rasm/kholisamo.jpg" alt="Нозимова Холисамо">
       <span>Нозимова Холисамо</span>
     </a>
   </div>
-     <br><h2>Муовинони директор</h2><br>
- 
-     <div class="links-container" id="linksContainer">
- <a href="1/omuzgor/lutfullo.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/lutfullo.png"  />
+
+  <h2>Муовинони директор</h2>
+  <div class="links-container">
+    <a href="1/omuzgor/lutfullo.html" class="link-item">
+      <img src="1/omuzgor/rasm/lutfullo.png" alt="Турдиев Лутфулло">
       <span>Турдиев Лутфулло</span>
     </a>
- 
- 
-    <a href="#"  class="link-item" >
-      <img src="#"  />
+    <a href="#" class="link-item">
+      <img src="#" alt="Лолаев Отахон">
       <span>Лолаев Отахон</span>
     </a>
   </div>
- 
- 
-  <br><h2>Омӯзгорони муассиса</h2><br>
 
-     <div class="links-container" id="links-container">
-         
-    
-    <a href="1/omuzgor/lutfullo.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/lutfullo.png"  />
-      <span>Турдиев Лутфулло</span>
-    </a>
-
-      <a href="1/omuzgor/azizullo.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/azizullo.png"  />
+  <h2>Омӯзгорони муассиса</h2>
+  <div class="links-container">
+    <a href="1/omuzgor/azizullo.html" class="link-item">
+      <img src="1/omuzgor/rasm/azizullo.png" alt="Турдиев Азизулло">
       <span>Турдиев Азизулло</span>
     </a>
- <a href="1/omuzgor/jamoliddin.html"  class="link-item" >
-      <img src="1/omuzgor/rasm/jamoliddin.png"  />
+    <a href="1/omuzgor/jamoliddin.html" class="link-item">
+      <img src="1/omuzgor/rasm/jamoliddin.png" alt="Ғафуров Ҷамолиддин">
       <span>Ғафуров Ҷамолиддин</span>
     </a>
-
-     <a href="1/omuzgor/sokinamoh.html"  class="link-item" >
+   <a href="1/omuzgor/sokinamoh.html"  class="link-item" >
       <img src="1/omuzgor/rasm/sokinamoh.jpg"  />
       <span>Сокинамоҳи Муҳиддин</span>
     </a>
@@ -296,24 +274,13 @@
       <img src="1/omuzgor/rasm/madina.jpg"  />
       <span>Зарипова Мадина</span>
       </a>
-      
-    </div>
-<script>
-  function toggleMenu() {
-  const sidebar = document.getElementById('sidebarMenu');
-  if (sidebar.classList.contains('show')) {
-    sidebar.classList.remove('show');
-    setTimeout(() => {
-      sidebar.style.display = 'none';
-    }, 300);
-  } else {
-    sidebar.style.display = 'flex';
-    setTimeout(() => {
-      sidebar.classList.add('show');
-    }, 10);
-  }
-}
-</script>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebarMenu');
+      sidebar.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
-
